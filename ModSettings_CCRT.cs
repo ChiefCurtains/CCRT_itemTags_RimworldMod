@@ -24,7 +24,20 @@ namespace CCRT_itemTags
         {
             //scribing the setting to the save file so it persists after reloading the save.
             Scribe_Values.Look(ref ccrt_enableItemTags, nameof(ccrt_enableItemTags), true);
+            Scribe_Values.Look(ref ccrt_enableTagA, nameof(ccrt_enableTagA), true);
+            Scribe_Values.Look(ref ccrt_enableTagB, nameof(ccrt_enableTagB), true);
+            Scribe_Values.Look(ref ccrt_enableTagC, nameof(ccrt_enableTagC), true);
+            Scribe_Values.Look(ref ccrt_enableTagD, nameof(ccrt_enableTagD), true);
+            Scribe_Values.Look(ref ccrt_enableTagE, nameof(ccrt_enableTagE), true);
+            Scribe_Values.Look(ref ccrt_enableTagF, nameof(ccrt_enableTagF), true);
+            Scribe_Values.Look(ref ccrt_enableTagG, nameof(ccrt_enableTagG), true);
+            Scribe_Values.Look(ref ccrt_enableTagH, nameof(ccrt_enableTagH), true);
+            Scribe_Values.Look(ref ccrt_enableTagI, nameof(ccrt_enableTagI), true);
+            Scribe_Values.Look(ref ccrt_enableTagJ, nameof(ccrt_enableTagJ), true);
+            Scribe_Values.Look(ref ccrt_enableTagK, nameof(ccrt_enableTagK), true);
+            Scribe_Values.Look(ref ccrt_enableTagL, nameof(ccrt_enableTagL), true);
             base.ExposeData();
+            
         }
         public void DoSettingsWindowContents(Rect canvas)
         {

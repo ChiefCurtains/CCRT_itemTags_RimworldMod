@@ -1,0 +1,39 @@
+﻿"CCRT_itemTags.TagA".Translate()
+
+    public class LabelNames
+    {
+        public virtual string TagName(string tagname)
+        {
+            return tagname;
+        }
+        public string TagALabel
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(TagALabel))
+                {
+                    return "Tag A";
+                }
+                return "TagA";
+            }
+        }
+    }
+
+
+
+
+            public virtual string TagName(string tagname)
+        {
+            return tagname;
+        }
+        public string TagALabel
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(TagALabel))
+                {
+                    return "Tag A";
+                }
+                return "TagA";
+            }
+        }

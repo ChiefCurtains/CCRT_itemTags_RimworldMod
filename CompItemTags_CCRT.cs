@@ -30,6 +30,14 @@ namespace CCRT_itemTags
         }
 
     }
+    public class CompProperties_FilterTag : CompProperties
+    {
+        public CompProperties_FilterTag()
+        {
+            compClass = typeof(CompItemTags_CCRT);
+        }
+
+    }
     /* 
     First of all, thank you XeoNovaDan for sharing your source online! It was immensely helpful in writing this mod and I definitely... borrowed... a significant amount of your code.
     This is my very first attempt at writing anything in C# and I know for a fact that I would not have been able to do it without heavily referencing your work!

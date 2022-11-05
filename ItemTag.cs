@@ -8,24 +8,24 @@ using Verse;
 
 namespace CCRT_itemTags
 {
-    public class ItemTag : IExposable
-    {
-        public ItemTag()
-        {
+    //public class ItemTag : IExposable
+    //{
+    //    public ItemTag()
+    //    {
 
-        }
-        public ItemTag(List<Designator_Base> contents, IntVec2 size, string defaultName = null, bool temporatry = false)
-        {
-            tagName = defaultName;
-            _size = size;
-            foreach (Designator_Base c in contents)
-            {
-                c. = this;
-            }
-        }
-        public string tagName;
-        private IntVec2 _size;
-    }
+    //    }
+    //    public ItemTag(List<Designator_Base> contents, IntVec2 size, string defaultName = null, bool temporatry = false)
+    //    {
+    //        tagName = defaultName;
+    //        _size = size;
+    //        foreach (Designator_Base c in contents)
+    //        {
+    //            c. = this;
+    //        }
+    //    }
+    //    public string tagName;
+    //    private IntVec2 _size;
+    //}
 
     //    {
     //        get

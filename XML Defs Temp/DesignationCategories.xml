@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DesignationCategoryDef>
+		<defName>CCRTItemTags</defName>
+		<label>Item Tags</label>
+		<description>Tag all the things.</description>
+		<order>455</order>
+		<specialDesignatorClasses>
+			<li>CCRT_itemTags.Designator_TagA</li>
+			<li>CCRT_itemTags.Designator_TagB</li>
+			<li>CCRT_itemTags.Designator_TagC</li>
+			<li>CCRT_itemTags.Designator_TagD</li>
+			<li>CCRT_itemTags.Designator_TagE</li>
+			<li>CCRT_itemTags.Designator_TagF</li>
+			<li>CCRT_itemTags.Designator_TagG</li>
+			<li>CCRT_itemTags.Designator_TagH</li>
+			<li>CCRT_itemTags.Designator_TagI</li>
+			<li>CCRT_itemTags.Designator_TagJ</li>
+			<li>CCRT_itemTags.Designator_TagK</li>
+			<li>CCRT_itemTags.Designator_TagL</li>
+		</specialDesignatorClasses>
+	</DesignationCategoryDef>
+</Defs>

@@ -10,7 +10,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagA)
+                if (ModSettings_ItemTag.ccrt_enableTagA)
                 {
                     return visible;
                 }
@@ -27,8 +27,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagA".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colYellowGold;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colYellowGold;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -38,7 +38,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = t as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemA = !compItemTags.CCRT_TagItemA;
             }
         }
@@ -51,7 +51,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagB)
+                if (ModSettings_ItemTag.ccrt_enableTagB)
                 {
                     return visible;
                 }
@@ -68,8 +68,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagB".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colOrange;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colOrange;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -79,7 +79,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = thing as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps?.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps?.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemB = !compItemTags.CCRT_TagItemB;
             }
         }
@@ -90,7 +90,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagC)
+                if (ModSettings_ItemTag.ccrt_enableTagC)
                 {
                     return visible;
                 }
@@ -107,8 +107,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagC".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colLightRed;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colLightRed;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -118,7 +118,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = thing as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps?.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps?.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemC = !compItemTags.CCRT_TagItemC;
             }
         }
@@ -129,7 +129,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagD)
+                if (ModSettings_ItemTag.ccrt_enableTagD)
                 {
                     return visible;
                 }
@@ -146,8 +146,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagD".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colLightGreen;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colLightGreen;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -158,7 +158,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = thing as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps?.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps?.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemD = !compItemTags.CCRT_TagItemD;
             }
         }
@@ -169,7 +169,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagE)
+                if (ModSettings_ItemTag.ccrt_enableTagE)
                 {
                     return visible;
                 }
@@ -186,8 +186,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagE".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colOlive;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colOlive;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -197,7 +197,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = thing as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps?.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps?.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemE = !compItemTags.CCRT_TagItemE;
             }
         }
@@ -208,7 +208,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagF)
+                if (ModSettings_ItemTag.ccrt_enableTagF)
                 {
                     return visible;
                 }
@@ -225,8 +225,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagF".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colDarkOlive;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colDarkOlive;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -236,7 +236,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = thing as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps?.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps?.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemF = !compItemTags.CCRT_TagItemF;
             }
         }
@@ -247,7 +247,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagG)
+                if (ModSettings_ItemTag.ccrt_enableTagG)
                 {
                     return visible;
                 }
@@ -264,8 +264,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagG".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colTurquoise;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colTurquoise;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -275,7 +275,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = thing as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps?.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps?.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemG = !compItemTags.CCRT_TagItemG;
             }
         }
@@ -286,7 +286,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagH)
+                if (ModSettings_ItemTag.ccrt_enableTagH)
                 {
                     return visible;
                 }
@@ -303,8 +303,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagH".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colSkyBlue;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colSkyBlue;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -314,7 +314,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = t as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps?.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps?.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemH = !compItemTags.CCRT_TagItemH;
             }
         }
@@ -325,7 +325,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagI)
+                if (ModSettings_ItemTag.ccrt_enableTagI)
                 {
                     return visible;
                 }
@@ -342,8 +342,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagI".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colDarkBlue;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colDarkBlue;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -353,7 +353,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = thing as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps?.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps?.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemI = !compItemTags.CCRT_TagItemI;
             }
         }
@@ -366,7 +366,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagJ)
+                if (ModSettings_ItemTag.ccrt_enableTagJ)
                 {
                     return visible;
                 }
@@ -383,8 +383,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagJ".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colLightPurple;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colLightPurple;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -394,7 +394,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = thing as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps?.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps?.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemJ = !compItemTags.CCRT_TagItemJ;
             }
         }
@@ -407,7 +407,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagK)
+                if (ModSettings_ItemTag.ccrt_enableTagK)
                 {
                     return visible;
                 }
@@ -424,8 +424,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagK".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colPurple;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colPurple;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -435,7 +435,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = thing as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps?.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps?.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemK = !compItemTags.CCRT_TagItemK;
             }
         }
@@ -448,7 +448,7 @@ namespace CCRT_itemTags
         {
             get
             {
-                if (ModSettings_CCRT.ccrt_enableTagL)
+                if (ModSettings_ItemTag.ccrt_enableTagL)
                 {
                     return visible;
                 }
@@ -465,8 +465,8 @@ namespace CCRT_itemTags
         {
             defaultLabel = "CCRT_itemTags.TagL".Translate();
             defaultDesc = null;
-            icon = TexCommand_CCRT.ccrt_iconTex;
-            defaultIconColor = ColorReference_CCRT.colDarkPurple;
+            icon = TexCommand_ItemTag.ccrt_iconTex;
+            defaultIconColor = Reference_Color_ItemTag.colDarkPurple;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -476,7 +476,7 @@ namespace CCRT_itemTags
             if (!flag)
             {
                 ThingWithComps thingWithComps = thing as ThingWithComps;
-                CompItemTags_CCRT compItemTags = thingWithComps?.GetComp<CompItemTags_CCRT>();
+                Comp_ItemTag compItemTags = thingWithComps?.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemL = !compItemTags.CCRT_TagItemL;
             }
         }

@@ -56,11 +56,19 @@ namespace CCRT_itemTags
             }
             else
             {
-                CompItemTags_CCRT compItemTags = (t is ThingWithComps thingWithComps) ? thingWithComps.GetComp<CompItemTags_CCRT>() : null;
-                result = (compItemTags != null);
+                foreach (var haulable in DefDatabase<ThingDef>.AllDefs)
+                {
+                    if (haulable.EverHaulable)
+                    {
+                        return true;
+                    }
+                }
+                return true;
             }
             return result;
         }
         public bool visible = true;
     }
+    //        CompItemTags_CCRT compItemTags = (t is ThingWithComps thingWithComps) ? thingWithComps.GetComp<CompItemTags_CCRT>() : null;
+    //result = (compItemTags != null);
 }

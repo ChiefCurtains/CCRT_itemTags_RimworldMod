@@ -11,7 +11,7 @@ namespace CCRT_itemTags
     public class CCRT_itemTagsMod : Mod
     {
         //Telling the game that this is a Mod and here is where to locate settings and harmony patches.
-        public static ModSettings_CCRT Settings;
+        public static ModSettings_ItemTag Settings;
         public static Harmony harmonyInstance;
         public override string SettingsCategory()
         {
@@ -20,21 +20,13 @@ namespace CCRT_itemTags
         public CCRT_itemTagsMod(ModContentPack content) : base(content)
         {
             //Building Settings in Mod Settings Menu
-            Settings = GetSettings<ModSettings_CCRT>();
+            Settings = GetSettings<ModSettings_ItemTag>();
             //Starting Harmony Instance
             harmonyInstance = new Harmony("ChiefCurtains.itemTags");
         }
         public override void DoSettingsWindowContents(Rect inRect)
         {
             Settings.DoSettingsWindowContents(inRect);
-        }
-
-    }
-    public class CompProperties_FilterTag : CompProperties
-    {
-        public CompProperties_FilterTag()
-        {
-            compClass = typeof(CompItemTags_CCRT);
         }
 
     }
@@ -51,7 +43,7 @@ namespace CCRT_itemTags
     */
 
     //This section is referred to any time the code calls for "TryGetComp" as everthing listed here is a ThingWithComps
-    public class CompItemTags_CCRT : ThingComp
+    public class Comp_ItemTag : ThingComp
     {
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
@@ -62,7 +54,7 @@ namespace CCRT_itemTags
             {
                 defaultLabel = "Tag This",
                 defaultDesc = "Click to tag this item as Item A. Right Click for more Tags.",
-                icon = TexCommand_CCRT.ccrt_iconTagsButtonUI,
+                icon = TexCommand_ItemTag.ccrt_iconTagsButtonUI,
                 // White color for anyone who creates texture patches.
                 defaultIconColor = Color.white,
                 toggleAction = delegate ()
@@ -71,7 +63,7 @@ namespace CCRT_itemTags
                 },
                 isActive = (() => allowedTagsToggleVisible),
             };
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagA)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagA)
             {
                 yield return new Command_Toggle
                 {
@@ -80,12 +72,12 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemA = !CCRT_TagItemA;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colYellowGold,
-                    defaultLabel = "CCRT_itemTags.TagA".Translate(),
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colYellowGold,
+                    defaultLabel = ModSettings_ItemTag.curNameA,
                 };
             }
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagB)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagB)
             {
                 yield return new Command_Toggle
                 {
@@ -94,12 +86,12 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemB = !CCRT_TagItemB;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colOrange,
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colOrange,
                     defaultLabel = "CCRT_itemTags.TagB".Translate(),
                 };
             }
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagC)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagC)
             {
                 yield return new Command_Toggle
                 {
@@ -108,12 +100,12 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemC = !CCRT_TagItemC;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colLightRed,
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colLightRed,
                     defaultLabel = "CCRT_itemTags.TagC".Translate(),
                 };
             }
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagD)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagD)
             {
                 yield return new Command_Toggle
                 {
@@ -122,12 +114,12 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemD = !CCRT_TagItemD;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colLightGreen,
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colLightGreen,
                     defaultLabel = "CCRT_itemTags.TagD".Translate(),
                 };
             }
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagE)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagE)
             {
                 yield return new Command_Toggle
                 {
@@ -136,12 +128,12 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemE = !CCRT_TagItemE;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colOlive,
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colOlive,
                     defaultLabel = "CCRT_itemTags.TagE".Translate(),
                 };
             }
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagF)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagF)
             {
                 yield return new Command_Toggle
                 {
@@ -150,12 +142,12 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemF = !CCRT_TagItemF;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colDarkOlive,
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colDarkOlive,
                     defaultLabel = "CCRT_itemTags.TagF".Translate(),
                 };
             }
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagG)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagG)
             {
                 yield return new Command_Toggle
                 {
@@ -164,12 +156,12 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemG = !CCRT_TagItemG;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colTurquoise,
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colTurquoise,
                     defaultLabel = "CCRT_itemTags.TagG".Translate(),
                 };
             }
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagH)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagH)
             {
                 yield return new Command_Toggle
                 {
@@ -178,12 +170,12 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemH = !CCRT_TagItemH;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colSkyBlue,
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colSkyBlue,
                     defaultLabel = "CCRT_itemTags.TagH".Translate(),
                 };
             }
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagI)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagI)
             {
                 yield return new Command_Toggle
                 {
@@ -192,12 +184,12 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemI = !CCRT_TagItemI;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colDarkBlue,
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colDarkBlue,
                     defaultLabel = "CCRT_itemTags.TagI".Translate(),
                 };
             }
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagJ)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagJ)
             {
                 yield return new Command_Toggle
                 {
@@ -206,12 +198,12 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemJ = !CCRT_TagItemJ;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colLightPurple,
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colLightPurple,
                     defaultLabel = "CCRT_itemTags.TagJ".Translate(),
                 };
             }
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagK)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagK)
             {
                 yield return new Command_Toggle
                 {
@@ -220,12 +212,12 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemK = !CCRT_TagItemK;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colPurple,
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colPurple,
                     defaultLabel = "CCRT_itemTags.TagK".Translate(),
                 };
             }
-            if (allowedTagsToggleVisible && ModSettings_CCRT.ccrt_enableTagL)
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagL)
             {
                 yield return new Command_Toggle
                 {
@@ -234,8 +226,8 @@ namespace CCRT_itemTags
                     {
                         CCRT_TagItemL = !CCRT_TagItemL;
                     },
-                    icon = TexCommand_CCRT.ccrt_iconTex,
-                    defaultIconColor = ColorReference_CCRT.colDarkPurple,
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Reference_Color_ItemTag.colDarkPurple,
                     defaultLabel = "CCRT_itemTags.TagL".Translate(),
                 };
             }
@@ -272,7 +264,7 @@ namespace CCRT_itemTags
             This is a generic UI element to make sure that there is no issue with tags being lost or other weirdnes, specifically when ticks are inconsistent.
             */
             base.PostSpawnSetup(respawningAfterLoad);
-            cachedTaggedOverlayDrawer = parent.Map.GetComponent<OverlayDrawer_CCRT>();
+            cachedTaggedOverlayDrawer = parent.Map.GetComponent<OverlayDrawer_ItemTag>();
             UpdateOverlayHandle();
         }
         public override void PostDeSpawn(Map map) //Copied from XeoNovaDan.
@@ -306,7 +298,7 @@ namespace CCRT_itemTags
                 // Take minified things into account
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     /*
                     This should never not be null to be honest as InnerThing would have CompNullifiable thus should be autopatched as it's a ThingWithComps
                     paranoid nullcheck
@@ -345,7 +337,7 @@ namespace CCRT_itemTags
                 // Take minified things into account
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemA = value;
                 }
@@ -360,7 +352,7 @@ namespace CCRT_itemTags
             {
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemB;
                 }
@@ -386,7 +378,7 @@ namespace CCRT_itemTags
                 }
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemB = value;
                 }
@@ -402,7 +394,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
 
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemC;
@@ -431,7 +423,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemC = value;
                 }
@@ -447,7 +439,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
 
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemD;
@@ -476,7 +468,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemD = value;
                 }
@@ -492,7 +484,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
 
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemE;
@@ -521,7 +513,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemE = value;
                 }
@@ -537,7 +529,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
 
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemF;
@@ -566,7 +558,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemF = value;
                 }
@@ -582,7 +574,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
 
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemG;
@@ -611,7 +603,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemG = value;
                 }
@@ -627,7 +619,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
 
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemH;
@@ -656,7 +648,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemH = value;
                 }
@@ -672,7 +664,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
 
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemI;
@@ -701,7 +693,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemI = value;
                 }
@@ -717,7 +709,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
 
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemJ;
@@ -746,7 +738,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemJ = value;
                 }
@@ -762,7 +754,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
 
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemK;
@@ -791,7 +783,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemK = value;
                 }
@@ -807,7 +799,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
 
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemL;
@@ -836,7 +828,7 @@ namespace CCRT_itemTags
 
                 if (MinifiedParent != null)
                 {
-                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<CompItemTags_CCRT>();
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
                     if (taggedComp != null)
                         taggedComp.CCRT_TagItemL = value;
                 }
@@ -855,51 +847,51 @@ namespace CCRT_itemTags
                 {
                     if (CCRT_TagItemA)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemA;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemA;
                     }
                     else if (CCRT_TagItemB)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemB;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemB;
                     }
                     else if (CCRT_TagItemC)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemC;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemC;
                     }
                     else if (CCRT_TagItemD)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemD;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemD;
                     }
                     else if (CCRT_TagItemE)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemE;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemE;
                     }
                     else if (CCRT_TagItemF)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemF;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemF;
                     }
                     else if (CCRT_TagItemG)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemG;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemG;
                     }
                     else if (CCRT_TagItemH)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemH;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemH;
                     }
                     else if (CCRT_TagItemI)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemI;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemI;
                     }
                     else if (CCRT_TagItemJ)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemJ;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemJ;
                     }
                     else if (CCRT_TagItemK)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemK;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemK;
                     }
                     else if (CCRT_TagItemL)
                     {
-                        cachedMatToDraw = OverlayDrawer_CCRT.CCRT_TagMatItemL;
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemL;
                     }
                     else
                         throw new NotImplementedException("Tried to get MatToDraw but item not Tagged CCRT_ItemTags: This is a build error, this should not happen. Contact the mod author on Steam.");
@@ -926,7 +918,7 @@ namespace CCRT_itemTags
         private bool ccrt_itemKtag;
         private bool ccrt_itemLtag;
         public bool allowedTagsToggleVisible;
-        private OverlayDrawer_CCRT cachedTaggedOverlayDrawer;
+        private OverlayDrawer_ItemTag cachedTaggedOverlayDrawer;
         private Material cachedMatToDraw;
     }
 }

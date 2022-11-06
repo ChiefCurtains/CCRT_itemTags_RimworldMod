@@ -4,7 +4,7 @@ using Verse;
 
 namespace CCRT_itemTags
 {
-    public class ModSettings_CCRT : ModSettings
+    public class ModSettings_ItemTag : ModSettings
     {
         // This bool MUST be true. It is called on severl times to enable the overlay. It is also what it toggled in settings and the overlay button.
         public static bool ccrt_enableItemTags = true;
@@ -20,6 +20,7 @@ namespace CCRT_itemTags
         public static bool ccrt_enableTagJ = true;
         public static bool ccrt_enableTagK = true;
         public static bool ccrt_enableTagL = true;
+        public static string curNameA;
         public override void ExposeData()
         {
             //scribing the setting to the save file so it persists after reloading the save.
@@ -36,6 +37,7 @@ namespace CCRT_itemTags
             Scribe_Values.Look(ref ccrt_enableTagJ, nameof(ccrt_enableTagJ), true);
             Scribe_Values.Look(ref ccrt_enableTagK, nameof(ccrt_enableTagK), true);
             Scribe_Values.Look(ref ccrt_enableTagL, nameof(ccrt_enableTagL), true);
+            Scribe_Values.Look(ref curNameA, nameof(curNameA), "A. " + curNameA);
             base.ExposeData();
             
         }
@@ -63,9 +65,35 @@ namespace CCRT_itemTags
             list.CheckboxLabeled("Disable \"" + "CCRT_itemTags.TagK".Translate() + "\" Tag", ref ccrt_enableTagK);
             list.CheckboxLabeled("Disable \"" + "CCRT_itemTags.TagL".Translate() + "\" Tag", ref ccrt_enableTagL);
             list.GapLine();
+            //string flagA = list.TextEntry(curNameA);
+            //if (list.ButtonText("Change Tag A Name", null, 1f))
+            //{
+            //    if (flagA != null)
+            //    {
+            //        curNameA = "A. " + flagA;
+            //    }
+            //}
             list.SubLabel("As of this version, Tag Names can be modified in \\Steam\\steamapps\\workshop\\content\\294100\\2879583413\\1.4\\Languages\\English\\Keys", 20f);
             list.SubLabel("As of this version, Tag Filters can be modified in \\Steam\\steamapps\\workshop\\content\\294100\\2879583413\\1.4\\Languages\\English\\DefInjected\\SpecialThingFilterDef", 20f);
             list.End();
         }
+        //I am going to look at TacticalGroups.Dialog_RenameColonistGroup for reference.
+        public class Dialog_RenameTagA : Dialog_Rename
+        {
+            public Dialog_RenameTagA()
+            {
+                curName = tagAName.nameTagA;
+            }
+            protected override AcceptanceReport NameIsValid(string name)
+            {
+                return true;
+            }
+            protected override void SetName(string name)
+            {
+                tagAName.SetName(name);
+            }
+            public TagAName tagAName; 
+        }
     }
+    //leaving it here for now. So far, I can follow the trail from Dialog_RenameColonistGroup to TieredFloatMenu to ColonistGroup : IExposable
 }

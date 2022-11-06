@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using CCRT_itemTags.Resources;
-using RimWorld;
-using RimWorld.Planet;
-using UnityEngine;
+﻿using CCRT_itemTags.Resources;
 using Verse;
-using Verse.AI;
-using Verse.Sound;
 
 namespace CCRT_itemTags.Renaming
 {
     // Reference TacticalGroups.ColonistGroup
-    public class IExposable_ItemTag : IExposable, ILoadReferenceable
+    public class ExItemTag : IExposable, ILoadReferenceable
     {
+        //public Name TagName { get; set; }
         public void SetName(string name) //line 73 (curName = curTagName, tagName = groupName)
         {
             tagName = name;

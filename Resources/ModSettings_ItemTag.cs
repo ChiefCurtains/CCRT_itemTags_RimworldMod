@@ -1,5 +1,4 @@
-﻿using CCRT_itemTags.Renaming;
-using RimWorld;
+﻿using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -66,14 +65,14 @@ namespace CCRT_itemTags
             list.CheckboxLabeled("Disable \"" + "CCRT_itemTags.TagK".Translate() + "\" Tag", ref ccrt_enableTagK);
             list.CheckboxLabeled("Disable \"" + "CCRT_itemTags.TagL".Translate() + "\" Tag", ref ccrt_enableTagL);
             list.GapLine();
-            if (list.ButtonText("Change Tag A Name", null, 1f))
-            {
-                Find.WindowStack.Add(new Dialog_RenameTagA(TagName));
-            }
+            //if (list.ButtonText("Change Tag A Name", null, 1f))
+            //{
+            //    Find.WindowStack.Add(new Dialog_RenameTagA(TagName));
+            //}
             list.SubLabel("As of this version, Tag Names can be modified in \\Steam\\steamapps\\workshop\\content\\294100\\2879583413\\1.4\\Languages\\English\\Keys", 20f);
             list.SubLabel("As of this version, Tag Filters can be modified in \\Steam\\steamapps\\workshop\\content\\294100\\2879583413\\1.4\\Languages\\English\\DefInjected\\SpecialThingFilterDef", 20f);
             list.End();
         }
-        public IExposable_ItemTag exItemTag;
+        //public ExItemTag exItemTag;
     }
 }

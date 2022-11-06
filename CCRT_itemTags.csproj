@@ -64,8 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Renaming\Dialog_RenameTagA.cs" />
-    <Compile Include="Renaming\IExposable_ItemTag.cs" />
     <Compile Include="Resources\Mod_ItemTag.cs" />
     <Compile Include="Resources\Resource_Color_ItemTag.cs" />
     <Compile Include="Core\Comp_ItemTag.cs" />
@@ -73,7 +71,6 @@
     <Compile Include="Designators\Designators_ItemTag.cs" />
     <Compile Include="Harmony\HarmonyPatches_ItemTag.cs" />
     <Compile Include="Resources\ModSettings_ItemTag.cs" />
-    <Compile Include="Renaming\Dialog_Rename_ItemTag.cs" />
     <Compile Include="Core\SpecialThingFilterWorker_ItemTag.cs" />
     <Compile Include="Resources\Strings.cs" />
     <Compile Include="TextureDrawing\OverlayDrawer_ItemTag.cs" />
@@ -86,6 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renaming\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,7 +36,7 @@ namespace CCRT_itemTags
         {
             bool flag = !CanDesignateThing(t).Accepted;
             if (!flag)
-            {
+            {   
                 ThingWithComps thingWithComps = t as ThingWithComps;
                 Comp_ItemTag compItemTags = thingWithComps.GetComp<Comp_ItemTag>();
                 compItemTags.CCRT_TagItemA = !compItemTags.CCRT_TagItemA;

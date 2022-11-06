@@ -56,14 +56,8 @@ namespace CCRT_itemTags
             }
             else
             {
-                foreach (var haulable in DefDatabase<ThingDef>.AllDefs)
-                {
-                    if (haulable.EverHaulable)
-                    {
-                        return true;
-                    }
-                }
-                return true;
+                Comp_ItemTag compItemTags = (t is ThingWithComps thingWithComps) ? thingWithComps.GetComp<Comp_ItemTag>() : null;
+                result = (compItemTags != null);
             }
             return result;
         }

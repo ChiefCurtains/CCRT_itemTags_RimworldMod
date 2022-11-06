@@ -39,7 +39,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colYellowGold,
-                    defaultLabel = ModSettings_ItemTag.curNameA,
+                    defaultLabel = "CCRT_itemTags.TagA".Translate(),
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagB)

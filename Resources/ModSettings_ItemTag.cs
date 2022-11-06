@@ -4,7 +4,7 @@ using Verse;
 
 namespace CCRT_itemTags
 {
-    public class ModSettings_CCRT : ModSettings
+    public class ModSettings_ItemTag : ModSettings
     {
         // This bool MUST be true. It is called on severl times to enable the overlay. It is also what it toggled in settings and the overlay button.
         public static bool ccrt_enableItemTags = true;
@@ -20,6 +20,7 @@ namespace CCRT_itemTags
         public static bool ccrt_enableTagJ = true;
         public static bool ccrt_enableTagK = true;
         public static bool ccrt_enableTagL = true;
+        //public static string curNameA;
         public override void ExposeData()
         {
             //scribing the setting to the save file so it persists after reloading the save.
@@ -36,6 +37,7 @@ namespace CCRT_itemTags
             Scribe_Values.Look(ref ccrt_enableTagJ, nameof(ccrt_enableTagJ), true);
             Scribe_Values.Look(ref ccrt_enableTagK, nameof(ccrt_enableTagK), true);
             Scribe_Values.Look(ref ccrt_enableTagL, nameof(ccrt_enableTagL), true);
+            //Scribe_Values.Look(ref curNameA, nameof(curNameA), "A. " + curNameA);
             base.ExposeData();
             
         }
@@ -63,9 +65,14 @@ namespace CCRT_itemTags
             list.CheckboxLabeled("Disable \"" + "CCRT_itemTags.TagK".Translate() + "\" Tag", ref ccrt_enableTagK);
             list.CheckboxLabeled("Disable \"" + "CCRT_itemTags.TagL".Translate() + "\" Tag", ref ccrt_enableTagL);
             list.GapLine();
+            //if (list.ButtonText("Change Tag A Name", null, 1f))
+            //{
+            //    Find.WindowStack.Add(new Dialog_RenameTagA(TagName));
+            //}
             list.SubLabel("As of this version, Tag Names can be modified in \\Steam\\steamapps\\workshop\\content\\294100\\2879583413\\1.4\\Languages\\English\\Keys", 20f);
             list.SubLabel("As of this version, Tag Filters can be modified in \\Steam\\steamapps\\workshop\\content\\294100\\2879583413\\1.4\\Languages\\English\\DefInjected\\SpecialThingFilterDef", 20f);
             list.End();
         }
+        //public ExItemTag exItemTag;
     }
 }

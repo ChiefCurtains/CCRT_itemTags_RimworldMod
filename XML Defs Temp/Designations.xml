@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DesignationDef>
+		<defName>ToggleTagA</defName>
+		<texturePath>UI/Designators/CCRT_iconTag</texturePath>
+		<targetType>Thing</targetType>
+	</DesignationDef>
+</Defs>

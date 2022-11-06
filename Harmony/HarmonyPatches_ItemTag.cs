@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using CCRT_itemTags.Resources;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -12,7 +13,7 @@ namespace CCRT_itemTags
         static HarmonyPatches()
         {
             //Tels the startup pacth to run anthing in the Solution starting with [HarmonyPatch(typeof(""))]
-            CCRT_itemTagsMod.harmonyInstance.PatchAll();
+            Mod_ItemTag.harmonyInstance.PatchAll();
         }
 
     }
@@ -64,7 +65,7 @@ namespace CCRT_itemTags
     {
         public static void Postfix()
         {
-            Scribe_Values.Look<bool>(ref ModSettings_CCRT.ccrt_enableItemTags, "ccrt_enableItemTags", true, false);
+            Scribe_Values.Look<bool>(ref ModSettings_ItemTag.ccrt_enableItemTags, "ccrt_enableItemTags", true, false);
         }
     }
     [HarmonyPatch(typeof(PlaySettings))]
@@ -76,23 +77,8 @@ namespace CCRT_itemTags
         {
             if (!worldView)
             {
-                row.ToggleableIcon(ref ModSettings_CCRT.ccrt_enableItemTags, TexCommand_CCRT.ccrt_showTaggedOverlay, "Toggle Tagged Overlay", null, null);
+                row.ToggleableIcon(ref ModSettings_ItemTag.ccrt_enableItemTags, TexCommand_ItemTag.ccrt_showTaggedOverlay, "Toggle Tagged Overlay", null, null);
             }
         }
     }
-    //[HarmonyPatch(typeof(DesignationCategoryDef))]
-    //[HarmonyPatch("resolvedDesignators")]
-    //public static class Patch_DesignationCategoryDef
-    //{
-    //    public static void PostFix()
-    //    {
-    //        DesignationCategoryDef named = DefDatabase<DesignationCategoryDef>.GetNamed("CCRTItemTags", true);
-    //        if (named == null)
-    //        {
-    //            throw new Exception("Planning designation category not found");
-    //        }
-    //        List<Designator> list = named as List<Designator>;
-    //    }
-
-    //}
 }

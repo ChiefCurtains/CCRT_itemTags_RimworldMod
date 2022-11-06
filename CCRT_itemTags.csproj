@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Lib.Harmony.2.2.2\lib\net472\0Harmony.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
@@ -64,22 +64,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColorReference_CCRT.cs" />
-    <Compile Include="CompItemTags_CCRT.cs" />
-    <Compile Include="Designators\Designator_Base.cs" />
-    <Compile Include="Designators\Designator_Tags.cs" />
-    <Compile Include="HarmonyPatches_CCRT.cs" />
-    <Compile Include="ItemTag.cs" />
-    <Compile Include="ModSettings_CCRT.cs" />
-    <Compile Include="SpecialThingFilterWorker_CCRT.cs" />
-    <Compile Include="OverlayDrawer_CCRT.cs" />
-    <Compile Include="StartupPatches_CCRT.cs" />
+    <Compile Include="Resources\Mod_ItemTag.cs" />
+    <Compile Include="Resources\Resource_Color_ItemTag.cs" />
+    <Compile Include="Core\Comp_ItemTag.cs" />
+    <Compile Include="Designators\DesignatorBase_ItemTag.cs" />
+    <Compile Include="Designators\Designators_ItemTag.cs" />
+    <Compile Include="Harmony\HarmonyPatches_ItemTag.cs" />
+    <Compile Include="Resources\ModSettings_ItemTag.cs" />
+    <Compile Include="Core\SpecialThingFilterWorker_ItemTag.cs" />
+    <Compile Include="Resources\Strings.cs" />
+    <Compile Include="TextureDrawing\OverlayDrawer_ItemTag.cs" />
+    <Compile Include="Resources\StartupPatches_ItemTag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TexCommand_CCRT.cs" />
+    <Compile Include="TextureDrawing\TexCommand_ItemTag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renaming\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

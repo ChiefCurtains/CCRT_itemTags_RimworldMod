@@ -3,7 +3,7 @@ using Verse;
 
 namespace CCRT_itemTags
 {
-    public abstract class Designator_Base : Designator
+    public abstract class DesignatorBase_ItemTag : Designator
     {
         public override int DraggableDimensions
         {
@@ -12,7 +12,7 @@ namespace CCRT_itemTags
                 return 2;
             }
         }
-        protected Designator_Base()
+        protected DesignatorBase_ItemTag()
         {
             useMouseIcon = true;
             soundDragSustain = SoundDefOf.Designate_DragStandard;
@@ -56,11 +56,13 @@ namespace CCRT_itemTags
             }
             else
             {
-                CompItemTags_CCRT compItemTags = (t is ThingWithComps thingWithComps) ? thingWithComps.GetComp<CompItemTags_CCRT>() : null;
+                Comp_ItemTag compItemTags = (t is ThingWithComps thingWithComps) ? thingWithComps.GetComp<Comp_ItemTag>() : null;
                 result = (compItemTags != null);
             }
             return result;
         }
         public bool visible = true;
     }
+    //        CompItemTags_CCRT compItemTags = (t is ThingWithComps thingWithComps) ? thingWithComps.GetComp<CompItemTags_CCRT>() : null;
+    //result = (compItemTags != null);
 }

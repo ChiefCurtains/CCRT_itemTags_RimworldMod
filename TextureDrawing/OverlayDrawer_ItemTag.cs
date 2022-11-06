@@ -77,18 +77,18 @@ namespace CCRT_itemTags
         }
 
         private static readonly float BaseAlt = AltitudeLayer.MetaOverlays.AltitudeFor();
-        public static readonly Material CCRT_TagMatItemA = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colYellowGold);
-        public static readonly Material CCRT_TagMatItemB = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colOrange);
-        public static readonly Material CCRT_TagMatItemC = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colLightRed);
-        public static readonly Material CCRT_TagMatItemD = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colLightGreen);
-        public static readonly Material CCRT_TagMatItemE = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colOlive);
-        public static readonly Material CCRT_TagMatItemF = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colDarkOlive);
-        public static readonly Material CCRT_TagMatItemG = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colTurquoise);
-        public static readonly Material CCRT_TagMatItemH = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colSkyBlue);
-        public static readonly Material CCRT_TagMatItemI = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colDarkBlue);
-        public static readonly Material CCRT_TagMatItemJ = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colLightPurple);
-        public static readonly Material CCRT_TagMatItemK = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colPurple);
-        public static readonly Material CCRT_TagMatItemL = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Reference_Color_ItemTag.colDarkPurple);
+        public static readonly Material CCRT_TagMatItemA = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colYellowGold);
+        public static readonly Material CCRT_TagMatItemB = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colOrange);
+        public static readonly Material CCRT_TagMatItemC = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colLightRed);
+        public static readonly Material CCRT_TagMatItemD = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colLightGreen);
+        public static readonly Material CCRT_TagMatItemE = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colOlive);
+        public static readonly Material CCRT_TagMatItemF = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colDarkOlive);
+        public static readonly Material CCRT_TagMatItemG = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colTurquoise);
+        public static readonly Material CCRT_TagMatItemH = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colSkyBlue);
+        public static readonly Material CCRT_TagMatItemI = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colDarkBlue);
+        public static readonly Material CCRT_TagMatItemJ = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colLightPurple);
+        public static readonly Material CCRT_TagMatItemK = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colPurple);
+        public static readonly Material CCRT_TagMatItemL = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colDarkPurple);
 
         public DrawBatch drawBatch;
         public List<Pair<Thing, Comp_ItemTag>> overlaysToDraw;

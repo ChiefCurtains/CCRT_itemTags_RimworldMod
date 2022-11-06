@@ -4,7 +4,7 @@ using Verse;
 namespace CCRT_itemTags
 {
     //Draggable Button in the Architect Menu under the "Icon Tags" group. 
-    internal class Designator_TagA : Designator_Base
+    internal class Designator_TagA : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -28,7 +28,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagA".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colYellowGold;
+            defaultIconColor = Resource_Color_ItemTag.colYellowGold;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -45,7 +45,7 @@ namespace CCRT_itemTags
 
 
     }
-    internal class Designator_TagB : Designator_Base
+    internal class Designator_TagB : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -69,7 +69,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagB".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colOrange;
+            defaultIconColor = Resource_Color_ItemTag.colOrange;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -84,7 +84,7 @@ namespace CCRT_itemTags
             }
         }
     }
-    internal class Designator_TagC : Designator_Base
+    internal class Designator_TagC : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -108,7 +108,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagC".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colLightRed;
+            defaultIconColor = Resource_Color_ItemTag.colLightRed;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -123,7 +123,7 @@ namespace CCRT_itemTags
             }
         }
     }
-    internal class Designator_TagD : Designator_Base
+    internal class Designator_TagD : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -147,7 +147,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagD".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colLightGreen;
+            defaultIconColor = Resource_Color_ItemTag.colLightGreen;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -163,7 +163,7 @@ namespace CCRT_itemTags
             }
         }
     }
-    internal class Designator_TagE : Designator_Base
+    internal class Designator_TagE : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -187,7 +187,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagE".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colOlive;
+            defaultIconColor = Resource_Color_ItemTag.colOlive;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -202,7 +202,7 @@ namespace CCRT_itemTags
             }
         }
     }
-    internal class Designator_TagF : Designator_Base
+    internal class Designator_TagF : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -226,7 +226,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagF".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colDarkOlive;
+            defaultIconColor = Resource_Color_ItemTag.colDarkOlive;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -241,7 +241,7 @@ namespace CCRT_itemTags
             }
         }
     }
-    internal class Designator_TagG : Designator_Base
+    internal class Designator_TagG : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -265,7 +265,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagG".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colTurquoise;
+            defaultIconColor = Resource_Color_ItemTag.colTurquoise;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -280,7 +280,7 @@ namespace CCRT_itemTags
             }
         }
     }
-    internal class Designator_TagH : Designator_Base
+    internal class Designator_TagH : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -304,7 +304,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagH".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colSkyBlue;
+            defaultIconColor = Resource_Color_ItemTag.colSkyBlue;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -319,7 +319,7 @@ namespace CCRT_itemTags
             }
         }
     }
-    internal class Designator_TagI : Designator_Base
+    internal class Designator_TagI : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -343,7 +343,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagI".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colDarkBlue;
+            defaultIconColor = Resource_Color_ItemTag.colDarkBlue;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -360,7 +360,7 @@ namespace CCRT_itemTags
 
 
     }
-    internal class Designator_TagJ : Designator_Base
+    internal class Designator_TagJ : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -384,7 +384,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagJ".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colLightPurple;
+            defaultIconColor = Resource_Color_ItemTag.colLightPurple;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -401,7 +401,7 @@ namespace CCRT_itemTags
 
 
     }
-    internal class Designator_TagK : Designator_Base
+    internal class Designator_TagK : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -425,7 +425,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagK".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colPurple;
+            defaultIconColor = Resource_Color_ItemTag.colPurple;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }
@@ -442,7 +442,7 @@ namespace CCRT_itemTags
 
 
     }
-    internal class Designator_TagL : Designator_Base
+    internal class Designator_TagL : DesignatorBase_ItemTag
     {
         public override bool Visible
         {
@@ -466,7 +466,7 @@ namespace CCRT_itemTags
             defaultLabel = "CCRT_itemTags.TagL".Translate();
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
-            defaultIconColor = Reference_Color_ItemTag.colDarkPurple;
+            defaultIconColor = Resource_Color_ItemTag.colDarkPurple;
             soundSucceeded = SoundDefOf.Designate_Claim;
             useMouseIcon = true;
         }

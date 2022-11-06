@@ -3,7 +3,7 @@ using Verse;
 
 namespace CCRT_itemTags
 {
-    public abstract class Designator_Base : Designator
+    public abstract class DesignatorBase_ItemTag : Designator
     {
         public override int DraggableDimensions
         {
@@ -12,7 +12,7 @@ namespace CCRT_itemTags
                 return 2;
             }
         }
-        protected Designator_Base()
+        protected DesignatorBase_ItemTag()
         {
             useMouseIcon = true;
             soundDragSustain = SoundDefOf.Designate_DragStandard;

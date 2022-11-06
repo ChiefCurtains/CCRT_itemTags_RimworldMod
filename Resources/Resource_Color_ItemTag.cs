@@ -8,16 +8,16 @@ namespace CCRT_itemTags
     These currently draw the static colors used by tags.
     I would like to have them evetually appear in a color picker window for editing of tag colors.
     */
-    public static class Reference_Color_ItemTag
+    public static class Resource_Color_ItemTag
     {
         public static List<Color> CCRT_ListOfColors
         {
             get
             {
-                bool flag = Reference_Color_ItemTag.lcolors == null;
+                bool flag = Resource_Color_ItemTag.lcolors == null;
                 if (flag)
                 {
-                    Reference_Color_ItemTag.lcolors = new List<Color>
+                    Resource_Color_ItemTag.lcolors = new List<Color>
                     {
                         colWhite,
                         colLightGray,
@@ -73,7 +73,7 @@ namespace CCRT_itemTags
                         colPeach
                     };
                 }
-                return Reference_Color_ItemTag.lcolors;
+                return Resource_Color_ItemTag.lcolors;
             }
         }
         public static readonly Color colWhite = new Color(1f, 1f, 1f);

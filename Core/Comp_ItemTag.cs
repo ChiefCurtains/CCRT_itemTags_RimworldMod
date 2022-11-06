@@ -8,54 +8,19 @@ using Color = UnityEngine.Color;
 
 namespace CCRT_itemTags
 {
-    public class CCRT_itemTagsMod : Mod
-    {
-        //Telling the game that this is a Mod and here is where to locate settings and harmony patches.
-        public static ModSettings_ItemTag Settings;
-        public static Harmony harmonyInstance;
-        public override string SettingsCategory()
-        {
-            return "Class Specific Item Tags";
-        }
-        public CCRT_itemTagsMod(ModContentPack content) : base(content)
-        {
-            //Building Settings in Mod Settings Menu
-            Settings = GetSettings<ModSettings_ItemTag>();
-            //Starting Harmony Instance
-            harmonyInstance = new Harmony("ChiefCurtains.itemTags");
-        }
-        public override void DoSettingsWindowContents(Rect inRect)
-        {
-            Settings.DoSettingsWindowContents(inRect);
-        }
-
-    }
-    /* 
-    First of all, thank you XeoNovaDan for sharing your source online! It was immensely helpful in writing this mod and I definitely... borrowed... a significant amount of your code.
-    This is my very first attempt at writing anything in C# and I know for a fact that I would not have been able to do it without heavily referencing your work!
-    I might be able to use this for something "throw new NotImplementedException($"Tried to draw trade icon for {trad} but {thing} not Tagged");"
-
-    vvv FOR THOSE WHO WISH TO MODIFY ANYTHING  vvv
-
-    I use the "ccrt_" (simplified Chief_Curtains) prefix to define which part of my code is touching the save file.
-    If you decide to add new tags or heavily modify any tags here, make your own short form prefix so that debugging can be simpler.
-    Also, if I decide to make any updates to the mod or add new tags, I will used the prefix "ccrt_XXXXX". If you do the same, there will be a conflict when I push a new build out.
-    */
-
-    //This section is referred to any time the code calls for "TryGetComp" as everthing listed here is a ThingWithComps
+    /// <summary>
+    /// This section is referred to any time the code calls for "TryGetComp" as ItemTags are a compProperty
+    /// </summary>
     public class Comp_ItemTag : ThingComp
     {
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            /*Tag button which is seen on the UI. Can be changed to any desired trexture by replacing \Textures\UI\Buttons
-            I wanted this to be a toggle with a confirmation check box but the option became messy and would result in tagged things having an X. 
-            I don't feel like fixing that so your confirmation is the icon on the entity itself.*/
+            ///Tag button which is seen on the UI. Can be changed to any desired trexture by replacing \Textures\UI\Buttons
             yield return new Command_Toggle
             {
                 defaultLabel = "Tag This",
                 defaultDesc = "Click to tag this item as Item A. Right Click for more Tags.",
                 icon = TexCommand_ItemTag.ccrt_iconTagsButtonUI,
-                // White color for anyone who creates texture patches.
                 defaultIconColor = Color.white,
                 toggleAction = delegate ()
                 {
@@ -73,7 +38,7 @@ namespace CCRT_itemTags
                         CCRT_TagItemA = !CCRT_TagItemA;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colYellowGold,
+                    defaultIconColor = Resource_Color_ItemTag.colYellowGold,
                     defaultLabel = ModSettings_ItemTag.curNameA,
                 };
             }
@@ -87,7 +52,7 @@ namespace CCRT_itemTags
                         CCRT_TagItemB = !CCRT_TagItemB;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colOrange,
+                    defaultIconColor = Resource_Color_ItemTag.colOrange,
                     defaultLabel = "CCRT_itemTags.TagB".Translate(),
                 };
             }
@@ -101,7 +66,7 @@ namespace CCRT_itemTags
                         CCRT_TagItemC = !CCRT_TagItemC;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colLightRed,
+                    defaultIconColor = Resource_Color_ItemTag.colLightRed,
                     defaultLabel = "CCRT_itemTags.TagC".Translate(),
                 };
             }
@@ -115,7 +80,7 @@ namespace CCRT_itemTags
                         CCRT_TagItemD = !CCRT_TagItemD;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colLightGreen,
+                    defaultIconColor = Resource_Color_ItemTag.colLightGreen,
                     defaultLabel = "CCRT_itemTags.TagD".Translate(),
                 };
             }
@@ -129,7 +94,7 @@ namespace CCRT_itemTags
                         CCRT_TagItemE = !CCRT_TagItemE;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colOlive,
+                    defaultIconColor = Resource_Color_ItemTag.colOlive,
                     defaultLabel = "CCRT_itemTags.TagE".Translate(),
                 };
             }
@@ -143,7 +108,7 @@ namespace CCRT_itemTags
                         CCRT_TagItemF = !CCRT_TagItemF;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colDarkOlive,
+                    defaultIconColor = Resource_Color_ItemTag.colDarkOlive,
                     defaultLabel = "CCRT_itemTags.TagF".Translate(),
                 };
             }
@@ -157,7 +122,7 @@ namespace CCRT_itemTags
                         CCRT_TagItemG = !CCRT_TagItemG;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colTurquoise,
+                    defaultIconColor = Resource_Color_ItemTag.colTurquoise,
                     defaultLabel = "CCRT_itemTags.TagG".Translate(),
                 };
             }
@@ -171,7 +136,7 @@ namespace CCRT_itemTags
                         CCRT_TagItemH = !CCRT_TagItemH;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colSkyBlue,
+                    defaultIconColor = Resource_Color_ItemTag.colSkyBlue,
                     defaultLabel = "CCRT_itemTags.TagH".Translate(),
                 };
             }
@@ -185,7 +150,7 @@ namespace CCRT_itemTags
                         CCRT_TagItemI = !CCRT_TagItemI;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colDarkBlue,
+                    defaultIconColor = Resource_Color_ItemTag.colDarkBlue,
                     defaultLabel = "CCRT_itemTags.TagI".Translate(),
                 };
             }
@@ -199,7 +164,7 @@ namespace CCRT_itemTags
                         CCRT_TagItemJ = !CCRT_TagItemJ;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colLightPurple,
+                    defaultIconColor = Resource_Color_ItemTag.colLightPurple,
                     defaultLabel = "CCRT_itemTags.TagJ".Translate(),
                 };
             }
@@ -213,7 +178,7 @@ namespace CCRT_itemTags
                         CCRT_TagItemK = !CCRT_TagItemK;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colPurple,
+                    defaultIconColor = Resource_Color_ItemTag.colPurple,
                     defaultLabel = "CCRT_itemTags.TagK".Translate(),
                 };
             }
@@ -227,19 +192,12 @@ namespace CCRT_itemTags
                         CCRT_TagItemL = !CCRT_TagItemL;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
-                    defaultIconColor = Reference_Color_ItemTag.colDarkPurple,
+                    defaultIconColor = Resource_Color_ItemTag.colDarkPurple,
                     defaultLabel = "CCRT_itemTags.TagL".Translate(),
                 };
             }
 
         }
-        /*
-        All tags which are scribed onto the save file are proceeded with "ccrt_" in order to facilitate debugging, save cleaning, and error reporting. 
-        This is the only section that touches the save file.
-        A tag which will appear as <ccrt_******tag> </ccrt_******tag> will be appended at the end of the tagged entity. 
-        This placement will be effected by mod load order but is irrelevant.
-        Section in quotes dictates the actual scribed name in the save file.
-        */
         public override void PostExposeData()
         {
             base.PostExposeData();
@@ -257,22 +215,18 @@ namespace CCRT_itemTags
             Scribe_Values.Look(ref ccrt_itemLtag, "ccrt_itemLtag");
         }
 
-        public override void PostSpawnSetup(bool respawningAfterLoad) //Copied from XeoNovaDan.
+        public override void PostSpawnSetup(bool respawningAfterLoad)
         {
-            /* 
-            Try and register the item as a tagged item to render when spawned. 
-            This is a generic UI element to make sure that there is no issue with tags being lost or other weirdnes, specifically when ticks are inconsistent.
-            */
+            ///Try and register the item as a tagged item to render when spawned.
             base.PostSpawnSetup(respawningAfterLoad);
             cachedTaggedOverlayDrawer = parent.Map.GetComponent<OverlayDrawer_ItemTag>();
             UpdateOverlayHandle();
         }
-        public override void PostDeSpawn(Map map) //Copied from XeoNovaDan.
+        public override void PostDeSpawn(Map map)
         {
-            /* 
-            Force deregister an item when despawned e.g. furniture minified, to prevent weird duplicate tagged overlays being rendered. 
-            Saves memory and attempts to prevent floating tags in the place of destroyed or discarded entities.
-            */
+
+            ///Force deregister an item when despawned e.g. furniture minified, to prevent weird duplicate tagged overlays being rendered. 
+            ///Saves memory and attempts to prevent floating tags in the place of destroyed or discarded entities.
             base.PostDeSpawn(map);
             cachedTaggedOverlayDrawer.Deregister(parent, this, false);
         }
@@ -299,10 +253,6 @@ namespace CCRT_itemTags
                 if (MinifiedParent != null)
                 {
                     var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
-                    /*
-                    This should never not be null to be honest as InnerThing would have CompNullifiable thus should be autopatched as it's a ThingWithComps
-                    paranoid nullcheck
-                    */
                     if (taggedComp != null)
                         return taggedComp.CCRT_TagItemA;
                 }
@@ -316,9 +266,6 @@ namespace CCRT_itemTags
                     /*
                     Preventing an item from having multiple tags. Thats how we end up with some cascading bugs.
                     All Comp Tags EXCEPT A. Do this for each tag type, excluding the parent tag. 
-                    Could be a an exclusion argument? 
-                    Maybe?
-                    It works so I am leaving it alone.
                     */
                     CCRT_TagItemB = false;
                     CCRT_TagItemC = false;

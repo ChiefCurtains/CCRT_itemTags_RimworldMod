@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using CCRT_itemTags.Resources;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -12,7 +13,7 @@ namespace CCRT_itemTags
         static HarmonyPatches()
         {
             //Tels the startup pacth to run anthing in the Solution starting with [HarmonyPatch(typeof(""))]
-            CCRT_itemTagsMod.harmonyInstance.PatchAll();
+            Mod_ItemTag.harmonyInstance.PatchAll();
         }
 
     }

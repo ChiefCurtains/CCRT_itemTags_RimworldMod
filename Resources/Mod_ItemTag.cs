@@ -22,7 +22,7 @@ namespace CCRT_itemTags.Resources
         }
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            Settings.DoSettingsWindowContents(inRect);
+            Settings.DoWindowContents(inRect);
         }
 
     }

@@ -1,5 +1,4 @@
-﻿using RimWorld;
-using UnityEngine;
+﻿using UnityEngine;
 using Verse;
 
 namespace CCRT_itemTags
@@ -60,106 +59,157 @@ namespace CCRT_itemTags
             Scribe_Values.Look(ref ccrt_enableTagJ, nameof(ccrt_enableTagJ), true);
             Scribe_Values.Look(ref ccrt_enableTagK, nameof(ccrt_enableTagK), true);
             Scribe_Values.Look(ref ccrt_enableTagL, nameof(ccrt_enableTagL), true);
-            Scribe_Values.Look(ref newNameA, nameof(curNameA), "A. " + newNameA, true);
+            Scribe_Values.Look(ref newNameA, nameof(curNameA), newNameA, true);
+            Scribe_Values.Look(ref newNameB, nameof(curNameB), newNameB, true);
+            Scribe_Values.Look(ref newNameC, nameof(curNameC), newNameC, true);
+            Scribe_Values.Look(ref newNameD, nameof(curNameD), newNameD, true);
+            Scribe_Values.Look(ref newNameE, nameof(curNameE), newNameE, true);
+            Scribe_Values.Look(ref newNameF, nameof(curNameF), newNameF, true);
+            Scribe_Values.Look(ref newNameG, nameof(curNameG), newNameG, true);
+            Scribe_Values.Look(ref newNameH, nameof(curNameH), newNameH, true);
+            Scribe_Values.Look(ref newNameI, nameof(curNameI), newNameI, true);
+            Scribe_Values.Look(ref newNameJ, nameof(curNameJ), newNameJ, true);
+            Scribe_Values.Look(ref newNameK, nameof(curNameK), newNameK, true);
+            Scribe_Values.Look(ref newNameL, nameof(curNameL), newNameL, true);
             base.ExposeData();
-            
+
         }
-        public void DoSettingsWindowContents(Rect canvas)
-        {           
+        public void DoWindowContents(Rect inRect)
+        {
+            Rect rect = inRect.LeftHalf();
+            Rect inRect2 = inRect.RightHalf();
+            Rect inRect3 = inRect2.LeftHalf();
+            Rect inRect4 = inRect2.RightHalf();
+            DrawMainOptions(rect);
+            DrawRenameEntry(inRect3);
+            DrawRenameButtons(inRect4);
+        }
+        public void DrawMainOptions(Rect inRect)
+        {
             Listing_Standard list = new Listing_Standard();
-            list.ColumnWidth = canvas.width;
-            list.Begin(canvas);
-            list.Label("Custom Tag Names");
-            list.GapLine();
+            list.Begin(inRect);
+            list.Label("Visibility Toggle");
+            list.GapLine(12f);
             list.CheckboxLabeled("Disable Item Tag Overlay", ref ccrt_enableItemTags, "Disable/Enable Item Tags");
-            list.GapLine();
-            list.CheckboxLabeled("Disable \"" + newNameA + "\" Tag", ref ccrt_enableTagA);
-            list.CheckboxLabeled("Disable \"" + newNameB + "\" Tag", ref ccrt_enableTagB);
-            list.CheckboxLabeled("Disable \"" + newNameC + "\" Tag", ref ccrt_enableTagC);
-            list.CheckboxLabeled("Disable \"" + newNameD + "\" Tag", ref ccrt_enableTagD);
-            list.CheckboxLabeled("Disable \"" + newNameE + "\" Tag", ref ccrt_enableTagE);
-            list.CheckboxLabeled("Disable \"" + newNameF + "\" Tag", ref ccrt_enableTagF);
-            list.CheckboxLabeled("Disable \"" + newNameG + "\" Tag", ref ccrt_enableTagG);
-            list.CheckboxLabeled("Disable \"" + newNameH + "\" Tag", ref ccrt_enableTagH);
-            list.CheckboxLabeled("Disable \"" + newNameI + "\" Tag", ref ccrt_enableTagI);
-            list.CheckboxLabeled("Disable \"" + newNameJ + "\" Tag", ref ccrt_enableTagJ);
-            list.CheckboxLabeled("Disable \"" + newNameK + "\" Tag", ref ccrt_enableTagK);
-            list.CheckboxLabeled("Disable \"" + newNameL + "\" Tag", ref ccrt_enableTagL);
-            list.GapLine();
-            tmpTagNameA = list.TextEntryLabeled("Change Tag A Name", tmpTagNameA, 1);
+            list.Gap(12f);
+            list.Label("Toggle Individual Tags");
+            list.GapLine(12f);
+            list.CheckboxLabeled("Disable Tag A: \"" + newNameA + "\" Tag", ref ccrt_enableTagA);
+            list.CheckboxLabeled("Disable Tag B: \"" + newNameB + "\" Tag", ref ccrt_enableTagB);
+            list.CheckboxLabeled("Disable Tag C: \"" + newNameC + "\" Tag", ref ccrt_enableTagC);
+            list.CheckboxLabeled("Disable Tag D: \"" + newNameD + "\" Tag", ref ccrt_enableTagD);
+            list.CheckboxLabeled("Disable Tag E: \"" + newNameE + "\" Tag", ref ccrt_enableTagE);
+            list.CheckboxLabeled("Disable Tag F: \"" + newNameF + "\" Tag", ref ccrt_enableTagF);
+            list.CheckboxLabeled("Disable Tag G: \"" + newNameG + "\" Tag", ref ccrt_enableTagG);
+            list.CheckboxLabeled("Disable Tag H: \"" + newNameH + "\" Tag", ref ccrt_enableTagH);
+            list.CheckboxLabeled("Disable Tag I: \"" + newNameI + "\" Tag", ref ccrt_enableTagI);
+            list.CheckboxLabeled("Disable Tag J: \"" + newNameJ + "\" Tag", ref ccrt_enableTagJ);
+            list.CheckboxLabeled("Disable Tag K: \"" + newNameK + "\" Tag", ref ccrt_enableTagK);
+            list.CheckboxLabeled("Disable Tag L: \"" + newNameL + "\" Tag", ref ccrt_enableTagL);
+            list.Gap(12f);
+            list.End();
+        }
+        public void DrawRenameEntry(Rect inRect)
+        {
+            Listing_Standard list = new Listing_Standard();
+            list.Begin(inRect);
+            list.Label("Custom Tag Names", -1f, null);
+            list.GapLine(12f);
+            tmpTagNameA = list.TextEntryLabeled("Tag A", tmpTagNameA, 1);
             string textA = null;
+
+            tmpTagNameB = list.TextEntryLabeled("Tag B", tmpTagNameB, 1);
+            string textB = null;
+
+            tmpTagNameC = list.TextEntryLabeled("Tag C", tmpTagNameC, 1);
+            string textC = null;
+
+            tmpTagNameD = list.TextEntryLabeled("Tag D", tmpTagNameD, 1);
+            string textD = null;
+
+            tmpTagNameE = list.TextEntryLabeled("Tag E", tmpTagNameE, 1);
+            string textE = null;
+
+            tmpTagNameF = list.TextEntryLabeled("Tag F", tmpTagNameF, 1);
+            string textF = null;
+
+            tmpTagNameG = list.TextEntryLabeled("Tag G", tmpTagNameG, 1);
+            string textG = null;
+
+            tmpTagNameH = list.TextEntryLabeled("Tag H", tmpTagNameH, 1);
+            string textH = null;
+
+            tmpTagNameI = list.TextEntryLabeled("Tag I", tmpTagNameI, 1);
+            string textI = null;
+
+            tmpTagNameJ = list.TextEntryLabeled("Tag J", tmpTagNameJ, 1);
+            string textJ = null;
+
+            tmpTagNameK = list.TextEntryLabeled("Tag K", tmpTagNameK, 1);
+            string textK = null;
+
+            tmpTagNameL = list.TextEntryLabeled("Tag L", tmpTagNameL, 1);
+            string textL = null;
+
+            list.End();
+        }
+        public void DrawRenameButtons(Rect inRect)
+        {
+            Listing_Standard list = new Listing_Standard();
+            list.Begin(inRect);
+            list.Label("Confirm", -1f, null);
+            list.GapLine(12f);
             if (list.ButtonText("Change Tag A Name", null, 1f))
             {
                 newNameA = tmpTagNameA;
             }
-            tmpTagNameB = list.TextEntryLabeled("Change Tag B Name", tmpTagNameB, 1);
-            string textB = null;
             if (list.ButtonText("Change Tag B Name", null, 1f))
             {
                 newNameB = tmpTagNameB;
             }
-            tmpTagNameC = list.TextEntryLabeled("Change Tag C Name", tmpTagNameC, 1);
-            string textC = null;
             if (list.ButtonText("Change Tag C Name", null, 1f))
             {
                 newNameC = tmpTagNameC;
             }
-            tmpTagNameD = list.TextEntryLabeled("Change Tag D Name", tmpTagNameD, 1);
-            string textD = null;
             if (list.ButtonText("Change Tag D Name", null, 1f))
             {
                 newNameD = tmpTagNameD;
             }
-            tmpTagNameE = list.TextEntryLabeled("Change Tag E Name", tmpTagNameE, 1);
-            string textE = null;
             if (list.ButtonText("Change Tag E Name", null, 1f))
             {
                 newNameE = tmpTagNameE;
             }
-            tmpTagNameF = list.TextEntryLabeled("Change Tag F Name", tmpTagNameF, 1);
-            string textF = null;
             if (list.ButtonText("Change Tag F Name", null, 1f))
             {
                 newNameF = tmpTagNameF;
             }
-            tmpTagNameG = list.TextEntryLabeled("Change Tag G Name", tmpTagNameG, 1);
-            string textG = null;
             if (list.ButtonText("Change Tag G Name", null, 1f))
             {
                 newNameG = tmpTagNameG;
             }
-            tmpTagNameH = list.TextEntryLabeled("Change Tag H Name", tmpTagNameH, 1);
-            string textH = null;
             if (list.ButtonText("Change Tag H Name", null, 1f))
             {
                 newNameH = tmpTagNameH;
             }
-            tmpTagNameI = list.TextEntryLabeled("Change Tag I Name", tmpTagNameI, 1);
-            string textI = null;
             if (list.ButtonText("Change Tag I Name", null, 1f))
             {
                 newNameI = tmpTagNameI;
             }
-            tmpTagNameJ = list.TextEntryLabeled("Change Tag J Name", tmpTagNameJ, 1);
-            string textJ = null;
             if (list.ButtonText("Change Tag J Name", null, 1f))
             {
                 newNameJ = tmpTagNameJ;
             }
-            tmpTagNameK = list.TextEntryLabeled("Change Tag K Name", tmpTagNameK, 1);
-            string textK = null;
             if (list.ButtonText("Change Tag K Name", null, 1f))
             {
                 newNameK = tmpTagNameK;
             }
-            tmpTagNameL = list.TextEntryLabeled("Change Tag L Name", tmpTagNameL, 1);
-            string textL = null;
             if (list.ButtonText("Change Tag L Name", null, 1f))
             {
                 newNameL = tmpTagNameL;
             }
             list.End();
         }
+
         private string tmpTagNameA;
         private string tmpTagNameB;
         private string tmpTagNameC;

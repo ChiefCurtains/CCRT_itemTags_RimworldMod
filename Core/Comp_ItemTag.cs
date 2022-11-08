@@ -19,7 +19,7 @@ namespace CCRT_itemTags
             yield return new Command_Toggle
             {
                 defaultLabel = "Tag This",
-                defaultDesc = "Click to tag this item as Item A. Right Click for more Tags.",
+                defaultDesc = "Click to toggle view of Enabled tags. Customize tag Names and Visibility in the options menu!",
                 icon = TexCommand_ItemTag.ccrt_iconTagsButtonUI,
                 defaultIconColor = Color.white,
                 toggleAction = delegate ()
@@ -39,7 +39,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colYellowGold,
-                    defaultLabel = "CCRT_itemTags.TagA".Translate(),
+                    defaultLabel = "A. " + ModSettings_ItemTag.newNameA,
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagB)
@@ -53,7 +53,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colOrange,
-                    defaultLabel = "CCRT_itemTags.TagB".Translate(),
+                    defaultLabel = "B. " + ModSettings_ItemTag.newNameB,
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagC)
@@ -67,7 +67,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colLightRed,
-                    defaultLabel = "CCRT_itemTags.TagC".Translate(),
+                    defaultLabel = "C. " + ModSettings_ItemTag.newNameC,
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagD)
@@ -81,7 +81,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colLightGreen,
-                    defaultLabel = "CCRT_itemTags.TagD".Translate(),
+                    defaultLabel = "D. " + ModSettings_ItemTag.newNameD,
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagE)
@@ -95,7 +95,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colOlive,
-                    defaultLabel = "CCRT_itemTags.TagE".Translate(),
+                    defaultLabel = "E. " + ModSettings_ItemTag.newNameE,
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagF)
@@ -109,7 +109,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colDarkOlive,
-                    defaultLabel = "CCRT_itemTags.TagF".Translate(),
+                    defaultLabel = "F. " + ModSettings_ItemTag.newNameF,
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagG)
@@ -123,7 +123,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colTurquoise,
-                    defaultLabel = "CCRT_itemTags.TagG".Translate(),
+                    defaultLabel = "G. " + ModSettings_ItemTag.newNameG,
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagH)
@@ -137,7 +137,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colSkyBlue,
-                    defaultLabel = "CCRT_itemTags.TagH".Translate(),
+                    defaultLabel = "H. " + ModSettings_ItemTag.newNameH,
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagI)
@@ -151,7 +151,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colDarkBlue,
-                    defaultLabel = "CCRT_itemTags.TagI".Translate(),
+                    defaultLabel = "I. " + ModSettings_ItemTag.newNameI,
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagJ)
@@ -165,7 +165,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colLightPurple,
-                    defaultLabel = "CCRT_itemTags.TagJ".Translate(),
+                    defaultLabel = "J. " + ModSettings_ItemTag.newNameJ,
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagK)
@@ -179,7 +179,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colPurple,
-                    defaultLabel = "CCRT_itemTags.TagK".Translate(),
+                    defaultLabel = "K. " + ModSettings_ItemTag.newNameK,
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagL)
@@ -193,7 +193,7 @@ namespace CCRT_itemTags
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colDarkPurple,
-                    defaultLabel = "CCRT_itemTags.TagL".Translate(),
+                    defaultLabel = "L. " + ModSettings_ItemTag.newNameL,
                 };
             }
 

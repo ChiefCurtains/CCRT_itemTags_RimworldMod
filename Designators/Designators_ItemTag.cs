@@ -25,7 +25,7 @@ namespace CCRT_itemTags
 
         public Designator_TagA()
         {
-            defaultLabel = "CCRT_itemTags.TagA".Translate();
+            defaultLabel = "A. " + ModSettings_ItemTag.newNameA;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colYellowGold;
@@ -66,7 +66,7 @@ namespace CCRT_itemTags
 
         public Designator_TagB()
         {
-            defaultLabel = "CCRT_itemTags.TagB".Translate();
+            defaultLabel = "B. " + ModSettings_ItemTag.newNameB;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colOrange;
@@ -105,7 +105,7 @@ namespace CCRT_itemTags
 
         public Designator_TagC()
         {
-            defaultLabel = "CCRT_itemTags.TagC".Translate();
+            defaultLabel = "C. " + ModSettings_ItemTag.newNameC;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colLightRed;
@@ -144,7 +144,7 @@ namespace CCRT_itemTags
 
         public Designator_TagD()
         {
-            defaultLabel = "CCRT_itemTags.TagD".Translate();
+            defaultLabel = "D. " + ModSettings_ItemTag.newNameD;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colLightGreen;
@@ -184,7 +184,7 @@ namespace CCRT_itemTags
 
         public Designator_TagE()
         {
-            defaultLabel = "CCRT_itemTags.TagE".Translate();
+            defaultLabel = "E. " + ModSettings_ItemTag.newNameE;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colOlive;
@@ -223,7 +223,7 @@ namespace CCRT_itemTags
 
         public Designator_TagF()
         {
-            defaultLabel = "CCRT_itemTags.TagF".Translate();
+            defaultLabel = "F. " + ModSettings_ItemTag.newNameF;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colDarkOlive;
@@ -262,7 +262,7 @@ namespace CCRT_itemTags
 
         public Designator_TagG()
         {
-            defaultLabel = "CCRT_itemTags.TagG".Translate();
+            defaultLabel = "G. " + ModSettings_ItemTag.newNameG;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colTurquoise;
@@ -301,7 +301,7 @@ namespace CCRT_itemTags
 
         public Designator_TagH()
         {
-            defaultLabel = "CCRT_itemTags.TagH".Translate();
+            defaultLabel = "H. " + ModSettings_ItemTag.newNameH;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colSkyBlue;
@@ -340,7 +340,7 @@ namespace CCRT_itemTags
 
         public Designator_TagI()
         {
-            defaultLabel = "CCRT_itemTags.TagI".Translate();
+            defaultLabel = "I. " + ModSettings_ItemTag.newNameI;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colDarkBlue;
@@ -381,7 +381,7 @@ namespace CCRT_itemTags
 
         public Designator_TagJ()
         {
-            defaultLabel = "CCRT_itemTags.TagJ".Translate();
+            defaultLabel = "J. " + ModSettings_ItemTag.newNameJ;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colLightPurple;
@@ -422,7 +422,7 @@ namespace CCRT_itemTags
 
         public Designator_TagK()
         {
-            defaultLabel = "CCRT_itemTags.TagK".Translate();
+            defaultLabel = "K. " + ModSettings_ItemTag.newNameK;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colPurple;
@@ -463,7 +463,7 @@ namespace CCRT_itemTags
 
         public Designator_TagL()
         {
-            defaultLabel = "CCRT_itemTags.TagL".Translate();
+            defaultLabel = "L. " + ModSettings_ItemTag.newNameL;
             defaultDesc = null;
             icon = TexCommand_ItemTag.ccrt_iconTex;
             defaultIconColor = Resource_Color_ItemTag.colDarkPurple;

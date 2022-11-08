@@ -1,5 +1,10 @@
-﻿using UnityEngine;
+﻿using RimWorld;
+using SettingsHelper;
+using System.Collections.Generic;
+using UnityEngine;
 using Verse;
+using Verse.Noise;
+using static RimWorld.ColonistBar;
 
 namespace CCRT_itemTags
 {
@@ -7,6 +12,7 @@ namespace CCRT_itemTags
     {
         // This bool MUST be true. It is called on severl times to enable the overlay. It is also what it toggled in settings and the overlay button.
         public static bool ccrt_enableItemTags = true;
+        public static bool ccrt_enableTag = true;
         public static bool ccrt_enableTagA = true;
         public static bool ccrt_enableTagB = true;
         public static bool ccrt_enableTagC = true;
@@ -116,41 +122,17 @@ namespace CCRT_itemTags
             list.Label("Custom Tag Names", -1f, null);
             list.GapLine(12f);
             tmpTagNameA = list.TextEntryLabeled("Tag A", tmpTagNameA, 1);
-            string textA = null;
-
             tmpTagNameB = list.TextEntryLabeled("Tag B", tmpTagNameB, 1);
-            string textB = null;
-
             tmpTagNameC = list.TextEntryLabeled("Tag C", tmpTagNameC, 1);
-            string textC = null;
-
             tmpTagNameD = list.TextEntryLabeled("Tag D", tmpTagNameD, 1);
-            string textD = null;
-
             tmpTagNameE = list.TextEntryLabeled("Tag E", tmpTagNameE, 1);
-            string textE = null;
-
             tmpTagNameF = list.TextEntryLabeled("Tag F", tmpTagNameF, 1);
-            string textF = null;
-
             tmpTagNameG = list.TextEntryLabeled("Tag G", tmpTagNameG, 1);
-            string textG = null;
-
             tmpTagNameH = list.TextEntryLabeled("Tag H", tmpTagNameH, 1);
-            string textH = null;
-
             tmpTagNameI = list.TextEntryLabeled("Tag I", tmpTagNameI, 1);
-            string textI = null;
-
             tmpTagNameJ = list.TextEntryLabeled("Tag J", tmpTagNameJ, 1);
-            string textJ = null;
-
             tmpTagNameK = list.TextEntryLabeled("Tag K", tmpTagNameK, 1);
-            string textK = null;
-
             tmpTagNameL = list.TextEntryLabeled("Tag L", tmpTagNameL, 1);
-            string textL = null;
-
             list.End();
         }
         public void DrawRenameButtons(Rect inRect)
@@ -209,7 +191,28 @@ namespace CCRT_itemTags
             }
             list.End();
         }
+        //public void AddEntryButtonHalf(Rect rect, string buttonLabel, ref string settingsValue, float leftPartPct = 0.5f)
+        //{
+        //    Listing_Standard list = new Listing_Standard();
+        //    list.Gap(Gap);
+        //    list.LineRectSpilter(out Rect leftHalf, out Rect rightHalf, leftPartPct);
+        //    string buffer = settingsValue.ToString();
+        //    bool confirmInput = false;
+        //    Widgets.TextField(leftHalf, settingsValue, 28);
+        //    if (Widgets.ButtonText(rightHalf, buttonLabel, true, true, confirmInput))
+        //    {
+        //        confirmInput = true;
+        //    }
 
+        //    //Widgets.ButtonText(rightHalf, buttonLabel, true, true, buttonActive, null);
+        //}
+
+
+
+        private static float gap = 12f;
+        private static float lineGap = 3f;
+        public static float Gap { get => gap; set => gap = value; }
+        public static float LineGap { get => lineGap; set => lineGap = value; }
         private string tmpTagNameA;
         private string tmpTagNameB;
         private string tmpTagNameC;

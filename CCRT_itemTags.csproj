@@ -72,7 +72,10 @@
     <Compile Include="Harmony\HarmonyPatches_ItemTag.cs" />
     <Compile Include="Resources\ModSettings_ItemTag.cs" />
     <Compile Include="Core\SpecialThingFilterWorker_ItemTag.cs" />
+    <Compile Include="Resources\SettingsHelper.cs" />
+    <Compile Include="Resources\Settings_RenamingWindow.cs" />
     <Compile Include="Resources\Strings.cs" />
+    <Compile Include="Resources\TagNamesDef.cs" />
     <Compile Include="TextureDrawing\OverlayDrawer_ItemTag.cs" />
     <Compile Include="Resources\StartupPatches_ItemTag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

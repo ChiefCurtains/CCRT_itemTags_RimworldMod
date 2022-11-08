@@ -10,8 +10,12 @@ namespace CCRT_itemTags
     /// <summary>
     /// TagNameDefs.xml
     /// </summary>
-    public class TagNamesDef : ThingDef
+    public class TagNamesDef : BuildableDef
     {
-        public string defaultTagAName;
+        public static TagNamesDef Named(string defName)
+        {
+            return DefDatabase<TagNamesDef>.GetNamed(defName, true);
+        }
+        public TagNamesDef category;
     }
 }

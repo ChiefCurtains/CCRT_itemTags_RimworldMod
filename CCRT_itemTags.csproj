@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\EnumTest.cs" />
     <Compile Include="Resources\Mod_ItemTag.cs" />
     <Compile Include="Resources\Resource_Color_ItemTag.cs" />
     <Compile Include="Core\Comp_ItemTag.cs" />

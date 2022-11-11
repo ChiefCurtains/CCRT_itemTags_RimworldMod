@@ -1,11 +1,4 @@
-﻿using RimWorld;
-using SettingsHelper;
-using System.Collections.Generic;
-using SettingsHelper;
-using System.Collections.Generic;
-using SettingsHelper;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Verse;
 
 namespace CCRT_itemTags

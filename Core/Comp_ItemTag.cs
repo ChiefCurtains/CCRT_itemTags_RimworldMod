@@ -35,6 +35,11 @@ namespace CCRT_itemTags
                     isActive = (() => CCRT_TagItemA),
                     toggleAction = delegate ()
                     {
+                        if (Event.current.button == 1)
+                        {
+                            ;
+                            return;
+                        }
                         CCRT_TagItemA = !CCRT_TagItemA;
                     },
                     icon = TexCommand_ItemTag.ccrt_iconTex,

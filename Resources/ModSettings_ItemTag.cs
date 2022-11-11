@@ -1,10 +1,6 @@
 ﻿using RimWorld;
-using SettingsHelper;
-using System.Collections.Generic;
 using UnityEngine;
 using Verse;
-using Verse.Noise;
-using static RimWorld.ColonistBar;
 
 namespace CCRT_itemTags
 {
@@ -191,23 +187,6 @@ namespace CCRT_itemTags
             }
             list.End();
         }
-        //public void AddEntryButtonHalf(Rect rect, string buttonLabel, ref string settingsValue, float leftPartPct = 0.5f)
-        //{
-        //    Listing_Standard list = new Listing_Standard();
-        //    list.Gap(Gap);
-        //    list.LineRectSpilter(out Rect leftHalf, out Rect rightHalf, leftPartPct);
-        //    string buffer = settingsValue.ToString();
-        //    bool confirmInput = false;
-        //    Widgets.TextField(leftHalf, settingsValue, 28);
-        //    if (Widgets.ButtonText(rightHalf, buttonLabel, true, true, confirmInput))
-        //    {
-        //        confirmInput = true;
-        //    }
-
-        //    //Widgets.ButtonText(rightHalf, buttonLabel, true, true, buttonActive, null);
-        //}
-
-
 
         private static float gap = 12f;
         private static float lineGap = 3f;

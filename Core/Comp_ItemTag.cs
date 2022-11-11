@@ -1,5 +1,4 @@
-﻿using HarmonyLib;
-using RimWorld;
+﻿using RimWorld;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -45,6 +44,7 @@ namespace CCRT_itemTags
                     icon = TexCommand_ItemTag.ccrt_iconTex,
                     defaultIconColor = Resource_Color_ItemTag.colYellowGold,
                     defaultLabel = "A. " + ModSettings_ItemTag.newNameA,
+
                 };
             }
             if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagB)

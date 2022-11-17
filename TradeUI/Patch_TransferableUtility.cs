@@ -17,9 +17,9 @@ namespace CCRT_itemTags.TradeUI
                 var tagCompB = b.TryGetComp<Comp_ItemTag>();
                 if (tagCompA != null && tagCompB != null)
                 {
-                    bool taggedTrade1 = tagCompA.CCRT_TagItemTrade;
-                    bool taggedTrade2 = tagCompB.CCRT_TagItemTrade;
-                    if (taggedTrade1 != taggedTrade2)
+                    bool compATag = tagCompA.CCRT_TagItemM;
+                    bool compBTag = tagCompB.CCRT_TagItemM;
+                    if (compATag != compBTag)
                     {
                         __result = false;
                         return;

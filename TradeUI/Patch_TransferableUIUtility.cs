@@ -21,7 +21,7 @@ namespace CCRT_itemTags.TradeUI
                     Comp_ItemTag compTagged = thing.TryGetComp<Comp_ItemTag>();
                     if (compTagged != null)
                     {
-                        bool tagTrade = compTagged.CCRT_TagItemTrade;
+                        bool tagTrade = compTagged.CCRT_TagItemM;
 
                         if (tagTrade)
                         {

@@ -270,7 +270,8 @@ namespace CCRT_itemTags
                 {
                     /*
                     Preventing an item from having multiple tags. Thats how we end up with some cascading bugs.
-                    All Comp Tags EXCEPT A. Do this for each tag type, excluding the parent tag. 
+                    All Comp Tags EXCEPT A. Do this for each tag type, excluding the parent tag.
+                    I wanted this to be simpler, but I think this is the best approach to "If you set this bool, it will make sure these other bools are off.
                     */
                     CCRT_TagItemB = false;
                     CCRT_TagItemC = false;
@@ -283,6 +284,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemJ = false;
                     CCRT_TagItemK = false;
                     CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -325,6 +327,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemJ = false;
                     CCRT_TagItemK = false;
                     CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -369,6 +372,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemJ = false;
                     CCRT_TagItemK = false;
                     CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -414,6 +418,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemJ = false;
                     CCRT_TagItemK = false;
                     CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -459,6 +464,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemJ = false;
                     CCRT_TagItemK = false;
                     CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -504,6 +510,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemJ = false;
                     CCRT_TagItemK = false;
                     CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -549,6 +556,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemJ = false;
                     CCRT_TagItemK = false;
                     CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -594,6 +602,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemJ = false;
                     CCRT_TagItemK = false;
                     CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -639,6 +648,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemJ = false;
                     CCRT_TagItemK = false;
                     CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -684,6 +694,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemI = false;
                     CCRT_TagItemK = false;
                     CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -774,6 +785,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemI = false;
                     CCRT_TagItemJ = false;
                     CCRT_TagItemK = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -789,6 +801,92 @@ namespace CCRT_itemTags
                 UpdateOverlayHandle();
             }
         }
+        //Item M is the trade tag.
+        public bool CCRT_TagItemM
+        {
+            get
+            {
+
+                if (MinifiedParent != null)
+                {
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
+
+                    if (taggedComp != null)
+                        return taggedComp.CCRT_TagItemM;
+                }
+                return ccrt_itemMtag;
+            }
+            set
+            {
+
+                if (value)
+                {
+                    CCRT_TagItemA = false;
+                    CCRT_TagItemB = false;
+                    CCRT_TagItemC = false;
+                    CCRT_TagItemD = false;
+                    CCRT_TagItemE = false;
+                    CCRT_TagItemF = false;
+                    CCRT_TagItemG = false;
+                    CCRT_TagItemH = false;
+                    CCRT_TagItemI = false;
+                    CCRT_TagItemJ = false;
+                    CCRT_TagItemK = false;
+                    CCRT_TagItemL = false;
+
+                    cachedMatToDraw = null;
+                }
+
+                if (MinifiedParent != null)
+                {
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
+                    if (taggedComp != null)
+                        taggedComp.CCRT_TagItemM = value;
+                }
+                else
+                    ccrt_itemMtag = value;
+                UpdateOverlayHandle();
+            }
+        }
+        public bool CCRT_TagItemReset
+        {
+            get
+            {
+
+                if (MinifiedParent != null)
+                {
+                    var taggedComp = MinifiedParent.InnerThing.TryGetComp<Comp_ItemTag>();
+
+                    if (taggedComp != null)
+                        return taggedComp.CCRT_TagItemReset;
+                }
+                return ccrt_resetTag;
+            }
+            set
+            {
+
+                if (value)
+                {
+                    CCRT_TagItemA = false;
+                    CCRT_TagItemB = false;
+                    CCRT_TagItemC = false;
+                    CCRT_TagItemD = false;
+                    CCRT_TagItemE = false;
+                    CCRT_TagItemF = false;
+                    CCRT_TagItemG = false;
+                    CCRT_TagItemH = false;
+                    CCRT_TagItemI = false;
+                    CCRT_TagItemJ = false;
+                    CCRT_TagItemK = false;
+                    CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
+
+                    cachedMatToDraw = null;
+                }
+                UpdateOverlayHandle();
+            }
+        }
+
 
         //Telling the game where to find the textures for cachedMatToDraw
         public Material MatToDraw
@@ -869,6 +967,11 @@ namespace CCRT_itemTags
         private bool ccrt_itemJtag;
         private bool ccrt_itemKtag;
         private bool ccrt_itemLtag;
+        //trade tag
+        private bool ccrt_itemMtag;
+        //remove all tags, for the designator
+        private bool ccrt_resetTag;
+
         public bool allowedTagsToggleVisible;
         private OverlayDrawer_ItemTag cachedTaggedOverlayDrawer;
         private Material cachedMatToDraw;

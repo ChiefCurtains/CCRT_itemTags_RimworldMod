@@ -20,6 +20,7 @@ namespace CCRT_itemTags
         public static bool ccrt_enableTagJ = true;
         public static bool ccrt_enableTagK = true;
         public static bool ccrt_enableTagL = true;
+        public static bool ccrt_enableTagM = true;
         public static string curNameA = "curNameA";
         public static string curNameB = "curNameB";
         public static string curNameC = "curNameC";
@@ -60,6 +61,7 @@ namespace CCRT_itemTags
             Scribe_Values.Look(ref ccrt_enableTagJ, nameof(ccrt_enableTagJ), true);
             Scribe_Values.Look(ref ccrt_enableTagK, nameof(ccrt_enableTagK), true);
             Scribe_Values.Look(ref ccrt_enableTagL, nameof(ccrt_enableTagL), true);
+            Scribe_Values.Look(ref ccrt_enableTagM, nameof(ccrt_enableTagM), true);
             Scribe_Values.Look(ref newNameA, nameof(curNameA), newNameA, true);
             Scribe_Values.Look(ref newNameB, nameof(curNameB), newNameB, true);
             Scribe_Values.Look(ref newNameC, nameof(curNameC), newNameC, true);
@@ -86,6 +88,7 @@ namespace CCRT_itemTags
             list.Label("Visibility Toggle");
             list.GapLine(12f);
             list.CheckboxLabeled("Disable Item Tag Overlay", ref ccrt_enableItemTags, "Disable/Enable Item Tags");
+            list.CheckboxLabeled("Disable Trade Tag", ref ccrt_enableTagM, "Disable/Enable Trade Tag");
             list.GapLine(12f);
             list.CheckboxLabeled("Disable Tag A: \"" + newNameA + "\" Tag", ref ccrt_enableTagA);
             tmpTagNameA = list.TextEntryLabeled("Tag A:         \"" + newNameA + "\" : ", tmpTagNameA, 1);

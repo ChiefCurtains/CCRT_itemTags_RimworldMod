@@ -201,6 +201,20 @@ namespace CCRT_itemTags
                     defaultLabel = "L. " + ModSettings_ItemTag.newNameL,
                 };
             }
+            if (allowedTagsToggleVisible && ModSettings_ItemTag.ccrt_enableTagL)
+            {
+                yield return new Command_Toggle
+                {
+                    isActive = (() => CCRT_TagItemL),
+                    toggleAction = delegate ()
+                    {
+                        CCRT_TagItemL = !CCRT_TagItemL;
+                    },
+                    icon = TexCommand_ItemTag.ccrt_iconTex,
+                    defaultIconColor = Resource_Color_ItemTag.colDarkPurple,
+                    defaultLabel = "Trade",
+                };
+            }
 
         }
         public override void PostExposeData()
@@ -218,6 +232,7 @@ namespace CCRT_itemTags
             Scribe_Values.Look(ref ccrt_itemJtag, "ccrt_itemJtag");
             Scribe_Values.Look(ref ccrt_itemKtag, "ccrt_itemKtag");
             Scribe_Values.Look(ref ccrt_itemLtag, "ccrt_itemLtag");
+            Scribe_Values.Look(ref ccrt_itemMtag, "ccrt_itemMtag");
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
@@ -244,7 +259,7 @@ namespace CCRT_itemTags
             Make sure to add any additional tags to this section or else the overlay will bug out.
             */
             cachedTaggedOverlayDrawer.Deregister(parent, this);
-            if (parent.Spawned && (CCRT_TagItemA || CCRT_TagItemB || CCRT_TagItemC || CCRT_TagItemD || CCRT_TagItemE || CCRT_TagItemF || CCRT_TagItemG || CCRT_TagItemH || CCRT_TagItemI || CCRT_TagItemJ || CCRT_TagItemK || CCRT_TagItemL))
+            if (parent.Spawned && (CCRT_TagItemA || CCRT_TagItemB || CCRT_TagItemC || CCRT_TagItemD || CCRT_TagItemE || CCRT_TagItemF || CCRT_TagItemG || CCRT_TagItemH || CCRT_TagItemI || CCRT_TagItemJ || CCRT_TagItemK || CCRT_TagItemL || CCRT_TagItemM))
                 cachedTaggedOverlayDrawer.Register(parent, this);
         }
         private MinifiedThing MinifiedParent => parent as MinifiedThing;
@@ -740,6 +755,7 @@ namespace CCRT_itemTags
                     CCRT_TagItemI = false;
                     CCRT_TagItemJ = false;
                     CCRT_TagItemL = false;
+                    CCRT_TagItemM = false;
 
                     cachedMatToDraw = null;
                 }
@@ -942,6 +958,10 @@ namespace CCRT_itemTags
                     else if (CCRT_TagItemL)
                     {
                         cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemL;
+                    }
+                    else if (CCRT_TagItemM)
+                    {
+                        cachedMatToDraw = OverlayDrawer_ItemTag.CCRT_TagMatItemM;
                     }
                     else
                         throw new NotImplementedException("Tried to get MatToDraw but item not Tagged CCRT_ItemTags: This is a build error, this should not happen. Contact the mod author on Steam.");

@@ -77,7 +77,6 @@
     <Compile Include="TradeUI\Patch_TransferableUtility.cs" />
     <Compile Include="TradeUI\Patch_TransferableUIUtility.cs" />
     <Compile Include="Harmony\HarmonyPatch_Pawn.cs" />
-    <Compile Include="Harmony\Patch_QualityUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

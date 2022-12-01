@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace CCRT_itemTags.Harmony
 {
-    public static class CCRT_HarmonyPatchPawn
+    public static class HarmonyPatch_Pawn
     {
         [HarmonyPatch(typeof(Pawn))]
         [HarmonyPatch(nameof(Pawn.GetGizmos))]

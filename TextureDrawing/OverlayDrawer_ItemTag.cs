@@ -89,6 +89,8 @@ namespace CCRT_itemTags
         public static readonly Material CCRT_TagMatItemJ = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colLightPurple);
         public static readonly Material CCRT_TagMatItemK = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colPurple);
         public static readonly Material CCRT_TagMatItemL = MaterialPool.MatFrom("UI/Designators/CCRT_iconTag", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colDarkPurple);
+        public static readonly Material CCRT_TagMatItemM = MaterialPool.MatFrom("UI/Designators/CCRT_iconTrade", ShaderDatabase.MetaOverlay, Resource_Color_ItemTag.colWhite);
+
 
         public DrawBatch drawBatch;
         public List<Pair<Thing, Comp_ItemTag>> overlaysToDraw;

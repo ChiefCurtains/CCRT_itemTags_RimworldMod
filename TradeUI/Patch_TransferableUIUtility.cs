@@ -25,7 +25,7 @@ namespace CCRT_itemTags.TradeUI
 
                         if (tagTrade)
                         {
-                            GUI.DrawTexture(iconRect, TexCommand_ItemTag.ccrt_iconTex);
+                            GUI.DrawTexture(iconRect, TexCommand_ItemTag.ccrt_iconTexTrade);
                         }
                         return;
                     }
